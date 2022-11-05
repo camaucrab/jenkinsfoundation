@@ -25,6 +25,12 @@ node {
         bat 'echo hello'
     }
     stage('Update New Version') {
-        bat 'update new version'
+        bat 'echo update new version'
+    }
+}
+node {
+    def mvnHome
+    stage('Verifing stage') {
+        echo $CurrentBuild.BuildNumber
     }
 }
