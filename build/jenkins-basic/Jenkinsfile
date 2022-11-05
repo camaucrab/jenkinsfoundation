@@ -1,5 +1,5 @@
 pipeline {
-    agen node
+    agen any
     stages {
         stage ('Prepare') {
             steps {
