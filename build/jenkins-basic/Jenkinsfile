@@ -31,6 +31,8 @@ node {
 node {
     def mvnHome
     stage('Verifing stage') {
-        bat 'echo ${CurrentBuild.BuildNumber}'
+        steps {
+            echo 'echo ${CurrentBuild.BuildNumber}'
+        }
     }
 }
