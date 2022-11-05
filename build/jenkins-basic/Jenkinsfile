@@ -9,6 +9,6 @@ node {
         mvnHome = tool 'M3'
     }
     stage('demo Test') {
-        sh 'echo hello'
+        bat 'echo hello'
     }
 }
