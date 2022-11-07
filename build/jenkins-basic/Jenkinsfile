@@ -1,11 +1,7 @@
 node {
     def mvnHome
-    stage('Getting Project') { // for display purposes
-        // Get some code from a GitHub repository
+    stage('Getting Project') {
         git 'https://github.com/jglick/simple-maven-project-with-tests.git'
-        // Get the Maven tool.
-        // ** NOTE: This 'M3' Maven tool must be configured
-        // **       in the global configuration.
         mvnHome = tool 'M3'
     }
     stage('Build Project') {
@@ -31,5 +27,6 @@ node {
     def mvnHome
     stage('Verifing stage') {
         bat 'echo ${CurrentBuild}'
+        bat 'pwd'
     }
 }
