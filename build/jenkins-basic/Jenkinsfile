@@ -1,5 +1,7 @@
 pipeline {
-    agent any
+    agent node {
+        def mvnHome
+    }
     stages {
         stage ('Prepare') {
             steps {
