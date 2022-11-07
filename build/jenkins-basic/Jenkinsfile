@@ -19,10 +19,8 @@ node {
 node {
     def mvnHome
     stage('Verifing stage') {
-        steps {
-            bat '''
-                mvn -v
-            '''
-        }
+        bat '''
+            mvn -v
+        '''
     }
 }
