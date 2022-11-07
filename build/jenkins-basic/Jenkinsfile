@@ -1,45 +1,26 @@
-pipeline {
-    agent any
-    stages {
-        stage('Getting Project') { // for display purposes
-            def mvnHome
-            // Get some code from a GitHub repository
-            git 'https://github.com/jglick/simple-maven-project-with-tests.git'
-            // Get the Maven tool.
-            // ** NOTE: This 'M3' Maven tool must be configured
-            // **       in the global configuration.
-            mvnHome = tool 'M3'
-        }
-        stage('Build Project') {
-            bat 'echo hello'
-        }
-        stage('Push Project To Nexus') {
-            bat 'echo hello'
+
+node {
+
+}
+node {
+    def mvnHome
+
+
+    stage('Backup Current Deploy') {
+        bat 'echo hello'
+    }
+    stage('Pull New Afrifact') {
+        bat 'echo hello'
+    }
+    stage('Update New Version') {
+        bat 'echo update new version'
+    }
+}
+node {
+    def mvnHome
+    stage('Verifing stage') {
+        steps {
+            bat 'echo ${currentBuild}'
         }
     }
 }
-// node {
-//
-// }
-// node {
-//     def mvnHome
-
-//
-//     stage('Backup Current Deploy') {
-//         bat 'echo hello'
-//     }
-//     stage('Pull New Afrifact') {
-//         bat 'echo hello'
-//     }
-//     stage('Update New Version') {
-//         bat 'echo update new version'
-//     }
-// }
-// node {
-//     def mvnHome
-//     stage('Verifing stage') {
-//         steps {
-//             bat 'echo ${CurrentBuild}'
-//         }
-//     }
-// }
