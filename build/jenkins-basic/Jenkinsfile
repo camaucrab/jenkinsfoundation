@@ -15,6 +15,7 @@ node {
     def mvnHome
     stage('Backup Current Deploy') {
         bat 'echo hello'
+        params.REQUESTED_ACTION != 'SILENCE'
     }
     stage('Pull New Afrifact') {
         bat 'echo hello'
