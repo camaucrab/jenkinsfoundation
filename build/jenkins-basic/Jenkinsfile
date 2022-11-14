@@ -27,7 +27,8 @@ node {
 node {
     def mvnHome
     stage('Verifing stage') {
-        bat `echo  ${env.BUILD_NUMBER} `
-        bat 'echo $pwd'
+            echo "current build number: ${currentBuild.changeSets.toString() }"
+            echo "previous build number: ${currentBuild.previousBuild.getNumber()}"
+            echo "previous build number: ${currentBuild.previousBuild}"
     }
 }
