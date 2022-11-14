@@ -27,7 +27,7 @@ node {
 node {
     def mvnHome
     stage('Verifing stage') {
-        bat 'echo ${currentBuild} '
+        bat 'echo ${build} '
         bat 'echo $pwd'
     }
 }
