@@ -13,6 +13,18 @@ node {
 }
 node {
     def mvnHome
+    stage('Deploy on staging') {
+        bat 'echo deploying on staging'
+        bat '''
+            mvn -v
+            pwd
+        '''
+    }
+
+}
+
+node {
+    def mvnHome
     stage('Backup Current Deploy') {
         bat 'echo hello'
         params.REQUESTED_ACTION != 'SILENCE'
